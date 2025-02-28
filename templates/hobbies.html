@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %} Experience {% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+{% block content %}
+ <!-- Hobbies Section -->
+    <div class="container py-5">
+        <h2 class="text-center mb-5">My Hobbies</h2>
+        <div class="row d-flex justify-content-center">
+            <!-- Hobby 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card hobby-card">
+                    <img src="{{ url_for('static', filename='images/hobby1.jpg') }}" class="card-img-top" alt="Hobby 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hobby 1</h5>
+                        <p class="card-text">Description for hobby 1. This is where I can describe the hobby in detail and share my interest in it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobby 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card hobby-card">
+                    <img src="{{ url_for('static', filename='images/hobby2.jpg') }}" class="card-img-top" alt="Hobby 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hobby 2</h5>
+                        <p class="card-text">Description for hobby 2. This is where I can describe the hobby in detail and share my interest in it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobby 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card hobby-card">
+                    <img src="{{ url_for('static', filename='images/hobby3.jpg') }}" class="card-img-top" alt="Hobby 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hobby 3</h5>
+                        <p class="card-text">Description for hobby 3. This is where I can describe the hobby in detail and share my interest in it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+{% block title %} About me {% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card about-card">
+            <div class="card-body">
+                <h2 class="card-title text-center">A Little About Me</h2>
+                <p class="card-text">
+                    Hello! I'm Sakhamuri sai sri karthikeya, a passionate Data Analyst with a Master of Science in Management, specializing in Data Analytics, from Indiana Wesleyan University. With a strong foundation in data analysis, statistical modeling, and data visualization. My skill set includes Python, SQL, and advanced data analytics tools, which I use to extract, clean, and visualize data in ways that are both insightful and impactful.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

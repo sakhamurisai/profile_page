@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Skills and Expertise {% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+{% block content %}
+<body>
+    <div class="main-container">
+        <div class="content-container">
+            <div class="skills-section">
+                <div class="skills-list">
+                    <h2 class="heading">Skills and Expertise</h2>
+                    <ul>
+                        <li><i class="fab fa-python"></i><strong>Python</strong></li>
+                        <li><i class="fab fa-python"></i><strong>Python - Machine Learning, Automation</strong></li>
+                        <li><i class="fas fa-database"></i><strong>SQL</strong></li>
+                        <li><i class="fas fa-database"></i><strong>PostgreSQL</strong></li>
+                        <li><i class="fas fa-database"></i><strong>MongoDB</strong></li>
+                        <li><i class="fas fa-chart-pie"></i><strong>PowerBI</strong></li>
+                        <li><i class="fas fa-chart-line"></i><strong>Data Visualization</strong></li>
+                        <li><i class="fab fa-html5"></i><strong>Basics in HTML and CSS</strong></li>
+                    </ul>
+                </div>
+                <div class="image-container">
+                    <!-- You can add an image here if desired -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
