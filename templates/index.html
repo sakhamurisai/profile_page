@@ -1,34 +1,56 @@
-{% extends "base.html" %}
-{% block title %} Home {% endblock %}
-{% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
-{% endblock %}
-{% block content %}
-<body style="display: flex; align-items: center; justify-content: center; height: 100vh;"><link rel="stylesheet" href="">
-<div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6">
-            <div class="card p-3 py-4">
-                <div class="text-center">
-                    <img src="https://randomuser.me/api/portraits/men/14.jpg" width="100" class="rounded-circle">
-                </div>
-                <div class="text-center mt-3">
-                    <h5 class="mt-2 mb-0">Sai Sakhamuri</h5>
-                    <span>Data Analyst</span>
-                    <div class="px-4 mt-1">
-                        <p class="fonts">Data Analyst, delivering strategic insights through a refined analytical approach, cultivated at Indiana Wesleyan University.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Correct way to link external CSS files using url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}"> <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+
+    <!-- Navigation Bar -->
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('hobbies') }}" class="nav-link">Hobbies</a></li>
+            <li class="nav-item"><a href="{{ url_for('skills') }}" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="{{ url_for('experience') }}" class="nav-link">Experience</a></li>
+        </ul>
+    </header>
+
+    <!-- Profile Card -->
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-3 py-4">
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/profile.jpg') }}" width="100" class="rounded-circle" alt="Profile Picture">
                     </div>
-                    <ul class="social-list">
-                        <li><a href="#" class="fab fa-facebook-f"></a></li>
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                        <li><a href="#" class="fab fa-linkedin-in"></a></li>
-                    </ul>
+                    <div class="text-center mt-3">
+                        <h5 class="mt-2 mb-0">Sai Sakhamuri</h5>
+                        <span>Data Analyst</span>
+                        <div class="px-4 mt-1">
+                            <p class="fonts">Data Analyst, delivering strategic insights through a refined analytical
+                                approach, cultivated at Indiana Wesleyan University.</p>
+                        </div>
+                        <ul class="social-list">
+                            <li><a href="#" class="fab fa-hackerrank"></a></li>
+                            <li><a href="#" class="fab fa-stack-overflow"></a></li>
+                            <li><a href="#" class="fab fa-github"></a></li>
+                            <li><a href="#" class="fab fa-linkedin-in"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div><!--js-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script><!--js end-->
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-{% endblock %}
+</html>

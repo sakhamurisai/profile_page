@@ -1,0 +1,138 @@
+/* Page Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #D84040; /* Main background color */
+    color: #3D3D3D; /* Dark text for readability */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Main Container - Card Layout */
+.main-container {
+    width: 70%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ECDCBF; /* Card background color */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Card Layout */
+.skills-section {
+    background: #FBF8EF; /* Card background color */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Floating Effect on Hover for the entire card */
+.skills-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills List */
+.skills-list {
+    width: 60%;
+}
+
+.skills-list .heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #578FCA;
+    font-weight: bold; /* Make the heading bold */
+}
+
+/* Skill Items - List style with icons */
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 16px;
+    color: #578FCA;
+    padding: 8px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Icons */
+.skills-list i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: -60px; /* Initially hidden above the viewport */
+    left: 0;
+    right: 0;
+    background-color: #F8F2DE; /* Matches page background */
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
+}
+
+/* Show the navigation bar when hovered over */
+header:hover {
+    top: 0;
+}
+
+/* Navigation Button Text */
+.nav-link {
+    color: #3D3D3D;
+    font-weight: bold;
+}
+
+/* Navigation Button Text Hover */
+.nav-link:hover {
+    color: #FFFFFF;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    padding: 30px;
+}
+
+/* Hobby Cards */
+.hobby-card {
+    background-color: #A31D1D; /* Hobby card background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hobby-card img {
+    width: 100%; /* Ensure images are uniform */
+    height: 200px; /* Crop images to same height */
+    object-fit: cover; /* Crop image if necessary */
+}
+
+/* Hobby Card Content */
+.hobby-card .card-body {
+    background-color: #F8F2DE; /* Light background for text */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Page Background Image Color */
+.page-bg-image {
+    background: #B4EBE6;
+}

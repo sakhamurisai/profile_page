@@ -1,0 +1,126 @@
+/* General Page Background */
+body {
+    background-color: #D1F8EF; /* Soft, calm background color */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    position: fixed;
+    top: -50px; /* Start with the navbar hidden */
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #B9B28A, #F1E2B8); /* Gradient background */
+    padding: 10px;
+    z-index: 100;
+    transition: top 0.3s ease-in-out; /* Smooth transition for the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-bar:hover {
+    top: 0; /* Slide down the navbar when hovered */
+}
+
+.nav-link {
+    color: #000000;
+    font-weight: bold;
+    margin: 0 15px;
+    text-transform: uppercase; /* Make links more prominent */
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+}
+
+/* Centered Layout for About Page */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px; /* To make space for the navbar */
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* About Card */
+.about-card {
+    background: linear-gradient(135deg, #F1E2B8, #80CBC4); /* Gradient background */
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+    transform: translateY(-10px); /* Floating effect */
+}
+
+/* About Title */
+.about-card h2 {
+    font-size: 36px;
+    color: #2C3E50; /* Dark text for contrast */
+    margin-bottom: 20px;
+}
+
+/* About Content */
+.about-card p {
+    font-size: 18px;
+    color: #2C3E50; /* Darker text for readability */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Social Media Section */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: 24px;
+    color: #2C3E50;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFB22C; /* Highlight color */
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: #B9B28A;
+    color: #2C3E50;
+}
+/* Remove the underline from active links */
+.nav-link {
+    text-decoration: none; /* Ensures no underline by default */
+    color: #000000; /* Black text color */
+    font-weight: bold;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    color: #FFFFFF; /* Change text color on hover */
+}
+
+/* Remove the underline from the active nav link */
+.nav-link.active {
+    text-decoration: none; /* No underline when the link is active */
+    color: #FFB22C; /* Active link color */
+}

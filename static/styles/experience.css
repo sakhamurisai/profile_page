@@ -1,0 +1,124 @@
+/* Page Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #B9B28A; /* Main background color for the page */
+    color: #3D3D3D; /* Dark text for readability */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding-top: 60px; /* Give space to the fixed navigation bar */
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    position: fixed;
+    top: 0; /* Fixed at the top */
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #B9B28A, #F1E2B8); /* Gradient background for navbar */
+    padding: 10px;
+    z-index: 100;
+    transition: top 0.3s ease-in-out; /* Smooth transition for the navbar */
+    display: flex;
+    justify-content: center; /* Center the items in the navbar */
+    align-items: center; /* Vertically align the items in the navbar */
+}
+
+/* Show the navigation bar when hovered over */
+.navigation-bar:hover {
+    top: 0; /* Navbar visible when hovered */
+}
+
+/* Navigation Button Text */
+.nav-link {
+    color: #000000; /* Black text color */
+    font-weight: bold;
+    margin: 0 15px; /* Add space between the buttons */
+}
+
+/* Navigation Button Text Hover */
+.nav-link:hover {
+    color: #FFFFFF; /* White text on hover */
+}
+
+/* Container for Navigation Bar */
+.navigation-bar ul {
+    display: flex;
+    justify-content: center; /* Center the navigation items horizontally */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Ensure navigation items are spaced evenly */
+.nav-item {
+    display: inline-block;
+    margin-right: 20px; /* Space between items */
+}
+
+.nav-item:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+}
+
+/* Work Experience Section - Card Layout */
+.experience-card {
+    background: linear-gradient(135deg, #F8F2DE, #F7F7F7); /* Gradient background for the card */
+    width: 80%;
+    max-width: 900px;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Floating effect shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Floating Effect on Hover for the entire card */
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Body Text */
+.card-body {
+    color: black; /* Text color */
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Heading styles for description */
+h4 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Paragraph Text */
+.card-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black; /* Text color for the paragraphs */
+}
+
+/* Container to center the card vertically and horizontally */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to start to avoid middle alignment */
+    min-height: 100vh;
+    padding-top: 20px; /* Adjust the position of the card below navbar */
+}
+
+/* For the fixed navigation bar at the top */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
