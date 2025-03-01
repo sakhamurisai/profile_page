@@ -1,7 +1,7 @@
 /* Page Background */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #B9B28A; /* Main background color for the page */
+    background: linear-gradient(45deg, #B9B28A, #F1E2B8); /* Gradient background for the page to match navbar */
     color: #3D3D3D; /* Dark text for readability */
     display: flex;
     align-items: center; /* Center content vertically */
@@ -60,8 +60,6 @@ body {
 
 .nav-item:last-child {
     margin-right: 0; /* Remove margin from the last item */
-}
-
 }
 
 /* Work Experience Section - Card Layout */

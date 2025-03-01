@@ -1,115 +1,126 @@
-/* Page Background */
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #FBF3B9; /* Main background color updated to #F37199 */
-    color: #3D3D3D; /* Dark text for readability */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    height: 100vh; /* Full viewport height */
     margin: 0;
-}
-
-/* Main Container - Card Layout */
-.main-container {
-    width: 70%; /* Reduced the width of the container */
-    max-width: 800px; /* Set a max width for the container */
-    padding: 20px;
-    background-color: #FBF8EF; /* Card background color */
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
-}
-
-/* Card Layout */
-.skills-section {
-    background: #FBF8EF; /* Updated card background color */
-    border-radius: 15px;
-    padding: 20px; /* Reduced padding */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Floating Effect on Hover for the entire card */
-.skills-section:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Skills List */
-.skills-list {
-    width: 60%;
-}
-
-.skills-list .heading {
-    font-size: 24px; /* Slightly smaller font size */
-    margin-bottom: 15px;
-    color: #578FCA; /* Blue accent color */
-    font-weight: bold; /* Make the heading bold */
-}
-
-/* Skill Items - List style with icons */
-.skills-list ul {
-    list-style: none;
     padding: 0;
-}
-
-.skills-list li {
-    font-size: 16px; /* Smaller font size for skills */
-    color: #578FCA; /* Blue text */
-    padding: 8px; /* Reduced padding */
-    margin: 8px 0; /* Reduced margin */
+    font-family: Arial, sans-serif;
+    background-color: #7886C7;
+    color: #7886C7; /* Light text color */
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    padding-top: 80px; /* Adjusted padding to avoid overlap with fixed navbar */
 }
 
-/* Icons */
-.skills-list i {
-    margin-right: 8px; /* Reduced margin between icon and text */
-    font-size: 18px; /* Reduced icon size */
+/* Floating Code Background Effect */
+body::before {
+    content: "< /> <div> {} </div> <h1> </h1> <p> </p>";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 20vh;
+    opacity: 0.2;
 }
 
 /* Navigation Bar */
 header {
+    background-color: #C5D3E8;
+    padding: 15px 0;
     position: fixed;
-    top: -60px; /* Initially hidden above the viewport */
+    width: 100%;
+    top: 0;
     left: 0;
-    right: 0;
-    background-color: #FFB433; /* Matches page background */
-    padding: 10px;
-    z-index: 100;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
 }
 
-/* Show the navigation bar when hovered over */
-header:hover {
-    top: 0; /* When hovering, position the nav bar at the top */
+/* Navigation Links */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Navigation Button Text */
+.nav-item {
+    list-style: none;
+}
+
 .nav-link {
-    color: #3D3D3D; /* Dark color for the navigation button text */
-    font-weight: bold; /* Make navigation text bold */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #F4F8D3; /* Light yellow text */
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Navigation Button Text Hover */
-.nav-link:hover {
-    color: #FFFFFF; /* White color when hovered over */
+/* Active and Hover States */
+.nav-link.active, .nav-link:hover {
+    background-color: #A6F1E0; /* Greenish color to stand out */
+    color: #333;
+    font-weight: bold; /* Makes active link bold */
 }
 
-/* Optional Image Area */
-.image-container {
-    width: 30%; /* Reduced width */
-    background: url('/static/images/skills-bg.png') no-repeat center;
-    background-size: cover;
-    border-radius: 10px;
-    height: 200px; /* Reduced height */
+/* Main Content Container */
+.main-container {
+    max-width: 900px; /* Reduced width for better alignment */
+    margin-top: 100px; /* Adjusted for better layout spacing */
+    padding: 40px;
+    background: #E8F9FF; /* Light background for the content container */
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align content in column */
+    width: 80%; /* Adjusted width for responsiveness */
 }
 
-/* Page Background Image Color */
-.page-bg-image {
-    background: #B4EBE6; /* Light background image color for the card */
+/* Skills Section */
+.skills-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Skills List */
+.skills-list {
+    display: block; /* Change to block for better control */
+    padding-left: 0;
+    margin: 0;
+    width: 100%; /* Full width to avoid restriction */
+}
+
+.skills-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 18px;
+    margin-bottom: 15px; /* Spacing between items */
+}
+
+.skills-list i {
+    margin-right: 10px;
+}
+
+/* Heading */
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #73C7C7;
 }

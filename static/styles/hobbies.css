@@ -74,10 +74,10 @@ body {
 /* Navigation Bar */
 header {
     position: fixed;
-    top: -60px; /* Initially hidden above the viewport */
+    top: 0; /* Fixed at the top */
     left: 0;
     right: 0;
-    background-color: #F8F2DE; /* Matches page background */
+    background-color: #D84040; /* Matches page background color */
     padding: 10px;
     z-index: 100;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -91,13 +91,13 @@ header:hover {
 
 /* Navigation Button Text */
 .nav-link {
-    color: #3D3D3D;
+    color: #FFFFFF; /* White text for visibility on the dark background */
     font-weight: bold;
 }
 
 /* Navigation Button Text Hover */
 .nav-link:hover {
-    color: #FFFFFF;
+    color: #F8F2DE; /* Light text color when hovered */
 }
 
 /* Hobbies Section */

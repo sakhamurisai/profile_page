@@ -30,7 +30,7 @@ body::before {
 
 /* Navigation Bar */
 header {
-    background-color: #C4D9FF; /* Light blue from palette */
+    background-color: #73C7C7; /* Matches body background color */
     padding: 15px 0;
     position: fixed;
     width: 100%;
@@ -62,8 +62,9 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
+/* Active and Hover States */
 .nav-link.active, .nav-link:hover {
-    background-color: #A6F1E0; /* Greenish color */
+    background-color: #A6F1E0; /* Greenish color to stand out */
     color: #333;
     transform: scale(1.05);
 }
